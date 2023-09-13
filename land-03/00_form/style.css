@@ -1,0 +1,183 @@
+/*
+    Fontes:
+        font-family: 'Poppins', sans-serif;
+        font-family: 'Staatliches', cursive.
+*/
+
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    background: #BFD7E4;
+    font-family:'Poppins', sans-serif;
+}
+
+body::before{
+    content: '';
+    display: block;
+    background: #293241;
+    position: absolute;
+    z-index: -1;
+    height: 465px;
+    width: 100%;
+}
+
+.page{
+    width: 750px;
+    margin: 0 auto;
+}
+
+header{
+    padding-top: 106px;
+    width: 100%;
+
+    text-align: center;
+    color:white;
+    margin-bottom: 32px;
+}
+
+header h1{
+    font-family:'Staatliches', cursive;
+}
+
+header p{
+    height: 46px;
+}
+
+form::before{
+    content:'INFORMAÇÕES PESSOAIS';
+    display:block;
+
+    text-align: center;
+    font-family:'Staatliches', cursive; 
+    color: white;
+    font-size: 24px;
+    line-height: 34px;
+
+    background: #F67669;
+    border-radius: 20px 20px 0px 0px;
+    
+    padding: 50px 0%;
+}
+
+form{
+    background: #FFF;
+    border-radius: 20px;
+    margin-bottom:392px;
+}
+
+fieldset{
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap:20px;
+}
+
+legend{
+    font-family: 'Staatliches', cursive;
+    font-size: 24px;
+    line-height: 34px;
+    color:#253B51;
+
+    text-align: center;
+
+    margin:30px auto;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #E6E6F0;
+    width: 100%;
+}
+
+.conteudo{
+    padding: 30px 64px 64px 64px;
+}
+
+.campo{
+    display: flex;
+    flex-direction:column;
+    align-items: start;
+    justify-content: center;
+}
+
+.campo label{
+    color: #4E4958;
+    font-family: 'Poppins';
+    font-size:14px;
+    font-weight:400;
+    line-height:24px;   
+
+    margin-bottom:8px;
+}
+
+.campo label span{
+    color: #C1BCCC;
+    font-size: 12px;
+    line-height:20px;
+    margin-left: 9px;
+}
+
+.campo label span:hover{
+    color:#4E4958;
+}
+
+.campo input, select{
+    border-radius:8px;
+    border: 1px solid var(--back-lines-in-white, #E6E6F0);
+    background: var(--shapes-02, #FAFAFC);
+    height: 56px;
+}
+
+.nome input, .sobrenome input{
+    width: 300px;
+}
+
+.email input{
+    width:622px;
+}
+
+.mentor select{
+    width: 300px;
+}
+
+.feedback input{
+    width:608px;
+    height:167px;
+}
+
+.data input{
+    width: 300px;
+}
+
+.sessao-3{
+    gap:25px;
+}
+
+.hora{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.horario-inicial input, .horario-final input{
+    width:140px;
+}
+
+input[type=submit]{
+    background:#F67669;
+    border-radius:8px;
+    border:none;
+
+    color:white;
+    font-size:20px;
+    font-family:'Staatliches', cursive;
+    line-height:26px;
+    
+    padding: 15px 0px;
+    width: 100%;
+    margin-top:64px;
+}

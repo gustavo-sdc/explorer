@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Staatliches&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="style.css">
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Formulário</title>
 </head>
 <body>
@@ -10,65 +16,69 @@
         <header>
             <h1>AVALIE A SUA MENTORIA</h1>
             <p>Chegou a hora de avaliar o seu mentor. Bora lá?</p>
-            <img src="" alt="balão-de-avaliação">
+            <img src="img/img1.svg" alt="balão-de-avaliação">
         </header>
 
         <form action="">
-            <fieldset class="sessao-1">
-                <div class="campo nome">
-                    <label for="nome">Nome</label>
-                    <input type="text" name="nome" id="nome">
-                </div>
-                <div class="campo sobrenome">
-                    <label for="sobrenome">Sobrenome</label>
-                    <input type="text" name="sobrenome" id="sobrenome">
-                </div>
-                <div class="campo email">
-                    <label for="email">Email<span>(digite um email válido)</span></label>
-                    <input type="email" name="email" id="email">
-                </div>
-            </fieldset>
-            
-            <fieldset class="sessao-2">
-                <legend>INFORMAÇÕES DO MENTOR</legend>
-                <div class="campo mentor">
-                    <label for="mentor">Selecione quem foi o seu mentor</label>
-                    <select name="mentor" id="mentor">
-                        <option value="mentor01">Mentor 01</option>
-                        <option value="mentor02">Mentor 02</option>
-                        <option value="mentor03">Mentor 03</option>
-                        <option value="mentor04">Mentor 04</option>
-                    </select>
-                </div>
-
-                <div class="campo feedback">
-                    <label for="feedback">Feedback sobre o mentor</label>
-                    <input type="text" name="feedback" id="feedback">
-                </div>
-
-                <div class="campo duvidas">
-                    <label for="duvidas">Todas as minhas dúvidas foram esclarecidas durante a mentoria.</label>
-                    <input type="checkbox" name="duvidas" id="duvidas">
-                </div>
-            </fieldset>
-
-            <fieldset class="sessao-3">
-                <legend>AGENDANDO PRÓXIMA MENTORIA</legend>
-                <div class="campo data">
-                    <label for="data">Data <span>(DD/MM/AAAA)</span></label>
-                    <input:data></input:data>
-                </div>
-                <div class="campo horario-inicial">
-                    <label for="horario-inicial">Das</label>
-                    <input type="time" name="horario-inicial" id="horario-inicial">
-                </div>
-                <div class="campo horario-final">
-                    <label for="horario-final">Até</label>
-                    <input type="time" name="horario-final" id="horario-final">
-                </div>
-            </fieldset>
-
-            <input type="submit" value="SALVAR">
+            <div class="conteudo">
+                <fieldset class="sessao-1">
+                    <div class="campo nome">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome">
+                    </div>
+                    <div class="campo sobrenome">
+                        <label for="sobrenome">Sobrenome</label>
+                        <input type="text" name="sobrenome" id="sobrenome">
+                    </div>
+                    <div class="campo email">
+                        <label for="email">Email<span>(digite um email válido)</span></label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                </fieldset>
+                
+                <fieldset class="sessao-2">
+                    <legend>INFORMAÇÕES DO MENTOR</legend>
+                    <div class="campo mentor">
+                        <label for="mentor">Selecione quem foi o seu mentor</label>
+                        <select name="mentor" id="mentor">
+                            <option value="mentor01">Mentor 01</option>
+                            <option value="mentor02">Mentor 02</option>
+                            <option value="mentor03">Mentor 03</option>
+                            <option value="mentor04">Mentor 04</option>
+                        </select>
+                    </div>
+    
+                    <div class="campo feedback">
+                        <label for="feedback">Feedback sobre o mentor</label>
+                        <input type="text" name="feedback" id="feedback">
+                    </div>
+    
+                    <div class="campo duvidas">
+                        <label for="duvidas">Todas as minhas dúvidas foram esclarecidas durante a mentoria.</label>
+                        <input type="checkbox" name="duvidas" id="duvidas">
+                    </div>
+                </fieldset>
+    
+                <fieldset class="sessao-3">
+                    <legend>AGENDANDO PRÓXIMA MENTORIA</legend>
+                    <div class="campo data">
+                        <label for="data">Data <span>(DD/MM/AAAA)</span></label>
+                        <input type="date" name="data" id="data">
+                    </div>
+                    <div class="hora">
+                        <div class="campo horario-inicial">
+                            <label for="horario-inicial">Das</label>
+                            <input type="time" name="horario-inicial" id="horario-inicial">
+                        </div>
+                        <div class="campo horario-final">
+                            <label for="horario-final">Até</label>
+                            <input type="time" name="horario-final" id="horario-final">
+                        </div>
+                    </div>
+                </fieldset>
+    
+                <input type="submit" value="SALVAR">
+            </div>
         </form>
     </div>
 </body>
