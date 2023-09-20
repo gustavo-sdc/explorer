@@ -11,19 +11,28 @@ Fonts
 }
 
 body{
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
 }
 
 body:before {
     content: '';
     display: block;
     background-color: #535971;
+    
+    width: 100%;
     height: 436px;
-    position: relative;
+    
+    position: absolute;
+    z-index: -1;
 }
 
 .page{
-    margin: auto 345px auto 345px;
+    width: 750px;
 }
 
 header{
