@@ -128,6 +128,12 @@ legend{
     border: 1px solid var(--back-lines-in-white, #E6E6F0);
     background: var(--shapes-02, #FAFAFC);
     height: 56px;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.campo input:hover, input:focus, select:hover, select:focus{
+    outline: 1px solid black;
 }
 
 .nome input, .sobrenome input{
@@ -182,6 +188,41 @@ input[type=submit]{
     margin-top:64px;
 }
 
-input[type=checkbox]:before {
-    
+.duvidas{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: start;
+
+    position: relative;
+}
+
+.duvidas label{
+    margin: 0 0 0 24px;
+    display: flex;
+}
+
+.duvidas input{
+    opacity: 0; 
+}
+
+.duvidas label::before {
+    content: '';
+    display: block;
+    border-radius:8px;
+    border: 1px solid var(--back-lines-in-white, #E6E6F0);
+    background: var(--shapes-02, #FAFAFC);
+    height: 24px;
+    width: 24px;
+
+    position: absolute;
+    left: 0;
+}
+
+.duvidas input:focus + label::before{
+    outline: 1px solid black;
+}
+
+.duvidas input:checked + label::before{
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 -4 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient x1='50%25' y1='0%25' x2='50%25' y2='100%25' id='a'%3E%3Cstop stop-color='%231DD47F' offset='0%25'/%3E%3Cstop stop-color='%230DA949' offset='100%25'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M714.443 40.627c.743.795.743 2.06 0 2.855l-16.696 17.891a1.944 1.944 0 0 1-1.65.614 1.944 1.944 0 0 1-1.496-.624l-9.044-9.692a2.108 2.108 0 0 1 0-2.855 1.938 1.938 0 0 1 2.854 0l7.768 8.324 15.41-16.513a1.938 1.938 0 0 1 2.854 0Z' transform='translate(-685 -40)' fill='url(%23a)'/%3E%3C/svg%3E");
 }
