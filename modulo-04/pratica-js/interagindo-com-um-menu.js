@@ -20,14 +20,10 @@
 */
 
 let list = [];
-let option = 0;
-
 
 function one(){
     let item = prompt(`Digite o nome do item:`)
-    list[option] = item
-
-    option++
+    list.push(item)
 }
 
 function two(){
@@ -40,13 +36,28 @@ function two(){
 
 
 let response = Number(prompt(`
-    Olá usuário! Digite o número da opção desejada:
-        1. Cadastrar um item na lista;
-        2. Mostrar itens cadastrados;
-        3. Sair do programa.
+Olá usuário! Digite o número da opção desejada:
+
+1. Cadastrar um item na lista;
+2. Mostrar itens cadastrados;
+3. Sair do programa.
 `))
 
 while (response != 3){
+    /*
+    switch(response){
+        case 1:
+            one()
+            break
+        case 2:
+            two()
+            break
+        default:
+            alert('Está opção não está programada, tente novamente.')
+    }
+
+    Podemos substituir o if else pelo switch, em longas cadeias condicionais.
+    */
     if (response == 1){
         one()
     } else if( response == 2){
