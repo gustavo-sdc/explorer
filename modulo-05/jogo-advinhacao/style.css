@@ -92,6 +92,8 @@ button{
     font-weight: 700;
     color: #FFF;
     border:none;
+
+    cursor: pointer;
 }
 
 input:focus{

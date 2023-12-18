@@ -14,15 +14,17 @@
 </head>
 <body>
     <div class="app">
-        <main>
-            <h1>Jogo da Advinhação</h1>
-            <p>Advinhe o número de 0 a 10</p>
-        </main>
-
-        <div class="form"> 
-            <input type="number" name="attempt" id="attempt" placeholder="0">
-            <button onclick="random()">Tentar</button>
-        </div>    
+        <section id="game">
+            <main>
+                <h1>Jogo da Advinhação</h1>
+                <p>Advinhe o número de 0 a 10</p>
+            </main>
+    
+            <div class="form"> 
+                <input type="number" name="attempt" id="attempt" placeholder="0">
+                <button id="buttonSend">Tentar</button>
+            </div>    
+        </section>
     </div>
 
     <script src="app.js"></script>

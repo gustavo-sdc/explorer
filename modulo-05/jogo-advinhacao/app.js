@@ -1,19 +1,25 @@
-let randomNumber; attempt; message; result
+// Variables
 
-function random(){
+let randomNumber, attempt, response
+const buttonSend = document.querySelector("#buttonSend")
+
+// Events
+
+buttonSend.addEventListener('click', newAttempt())
+
+
+// Functions 
+
+function newAttempt(){
     attempt = document.querySelector('#attempt').value
-    result = document.querySelector('#result')
-    
     randomNumber = (Math.random()*10).toFixed(0)
     
     
     if (attempt === randomNumber){
-        message = 'Parabéns, você acertou!!'
+        response = 'Parabéns, você acertou!!'
     } else{
-        message = 'Não foi dessa vez, tente novamente!!'
+        response = 'Não foi dessa vez, tente novamente!!'
     }
 
-    alert(message)
-
-    console.log(attempt, randomNumber)
+    console.log(response)
 }
