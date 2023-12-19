@@ -1,0 +1,189 @@
+/*
+font-family: 'Dancing Script', cursive;
+font-family: 'DM Sans', sans-serif;
+font-family: 'Montserrat', sans-serif;
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%; /* 1rem = 10px */
+    --primary-blue:#34355B;
+    --light-blue: #E4EDF1;
+    --blue-one: #190361;
+    --pink-one: #B0F;
+    --yellow: #FF9500;
+    
+
+
+    --gradient-one: linear-gradient(45deg, var(--blue-one) 0%, var(--pink-one) 100%)
+    --gradient-two: linear-gradient(90deg, var(--blue-one) 0%, var(--pink-one) 100%)
+}
+
+body, .app{
+    width: 100vw;
+    height: 100vh;
+    color: var(--primary-blue);
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(45deg, var(--blue-one) 0%, var(--pink-one) 100%)
+}
+
+h1, h2{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size:2.4rem;
+    font-weight:700;
+    line-height:normal
+}
+
+p{
+    font-size: 1.5rem;
+    font-weight:400;
+    text-align:center;
+}
+
+.hide{
+    display: none !important;
+}
+
+.app{
+    font-family: 'DM Sans', sans-serif;
+
+    background-color: linear-gradient(45deg, var(--blue-one) 0%, var(--pink-one) 100%);
+    transition: .75s;
+}
+
+main{
+    width: 42.8rem;
+    height: 54.2rem;
+
+    background-color: white;
+    border-radius:5px;
+    box-shadow: 0px 2rem 5rem 0px rgba(0, 0, 0, .80);
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+}
+
+main section{
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    gap:2rem;
+}
+
+.biscoito{
+    width: 24.8rem;
+    transition: .5s;
+}
+
+.biscoito:hover{
+    animation: vibration .15s ease infinite;
+}
+
+button{
+    background-color: var(--yellow);
+    border-radius:4px;
+    padding: 1.6rem;
+    gap: 1rem;
+    border: none;
+
+    color: #FFF;
+}
+
+.responseBox{
+    width: 100%;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.responseBox h2{
+    margin-bottom: 15rem;
+}
+
+.response{
+    background:var(--light-blue);
+    box-shadow: 2px 2px 2px 0px rgba(85,85,85 0.5);
+
+    gap: 1rem;
+    padding:1rem;
+
+    animation: growBox 1.5s ease-in-out 1;
+    
+    position: absolute;
+    z-index: 1;
+    bottom: 22.5rem;
+
+    width: 100%;
+    min-height: 10vh;
+}
+
+.response p{
+    font-family: 'Dancing Script', sans-serif;
+    font-size: 2.4rem;
+    font-weight:400;
+    line-height:normal;
+    text-align: center;
+
+    animation: growWord 1.5s ease-in-out 1;
+}
+
+
+@keyframes vibration {
+    0%{
+        transform: translateX(0px);
+    }
+    25%{
+        transform: translate(5px);
+    }
+
+    50%{
+        transform: translateX(0px);
+    }
+    
+    75%{
+        transform: translateX(-5px)
+    }
+
+    100%{
+        transform: translateX(0px);
+    }
+
+}
+
+@keyframes growBox{
+    0%{
+        width: 0%;
+        height: 0%;
+        bottom: 10rem;
+    }
+    100%{
+        width: 100%;
+        min-height: 10rem;
+        bottom: 22.5rem;
+    }
+}
+
+@keyframes growWord{
+    from{
+        font-size:0rem;
+    }   
+    to{
+        font-size:2.4rem;
+    }
+}
