@@ -14,7 +14,8 @@
 </head>
 <body>
     <div class="app">
-        <section id="game">
+
+        <section id="attemptBox" class="container">
             <main>
                 <h1>Jogo da Advinhação</h1>
                 <p>Advinhe o número de 0 a 10</p>
@@ -25,8 +26,14 @@
                 <button id="buttonSend">Tentar</button>
             </div>    
         </section>
+
+        <section id="responseBox" class="hide container">
+            <h2 id="responseContent" class="response"></h2>
+            <button type="button" class="again" id="again">Tentar novamente</button>
+        </section>
+
     </div>
 
     <script src="app.js"></script>
 </body>
-</html>
+</html>,
