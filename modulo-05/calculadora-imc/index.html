@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="./js/main.js" type="module" defer></script>
+</head>
+<body>
+    <div class="app">
+        <h5 class="alert" id="alert"></h5>
+
+        <main>
+            <h1>Cálculo de IMC</h1>
+            <form action="">
+                
+                <div class="inputBox">
+                    <label for="weight">Peso (kg)</label>
+                    <input type="number" name="weight" id="weight">
+                </div>
+                <div class="inputBox">
+                    <label for="weight">Peso (kg)</label>
+                    <input type="number" name="weight" id="weight">
+                </div>
+
+                <button type="submit">
+                    Calcular IMC 
+                    <img src="./assets/arrow-up-right.svg" alt="seta">
+                </button>
+            </form>
+        </main>
+
+        <section class="modalResponse">
+            <button class="close" id="close">
+                <img src="./assets/close.svg" alt="close icon">
+            </button>
+            <h2></h2>
+        </section>
+    </div>
+</body>
+</html>

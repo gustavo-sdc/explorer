@@ -1,0 +1,25 @@
+/* font-family: 'Roboto', sans-serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-family: 62.5%; /* 1rem = 10px */
+    --bg-color:#040924;
+    --bg-alert: #F03E3E;
+    --bg-input:#DCE2E9;
+    
+    --tt-title:#0C3440;
+    
+    --green-one:#00453A;
+    --grey-one:rgba(73, 80, 87, 0.30);
+    --blue-one:#02799D;
+}
+
+body{
+    background: var(--bg-color);
+    font-family: 'Roboto', sans-serif;
+}
