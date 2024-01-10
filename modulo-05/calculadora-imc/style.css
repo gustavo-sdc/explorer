@@ -7,7 +7,7 @@
 }
 
 :root{
-    font-family: 62.5%; /* 1rem = 10px */
+    font-size: 62.5%; /* 1rem = 10px */
     --bg-color:#040924;
     --bg-alert: #F03E3E;
     --bg-input:#DCE2E9;
@@ -19,6 +19,10 @@
     --blue-one:#02799D;
 }
 
+.hide{
+    display: none !important;
+}
+
 body{
     background: var(--bg-color);
     font-family: 'Roboto', sans-serif;
@@ -27,24 +31,29 @@ body{
 .app{
     width: 100vw;
     height: 100vh;
+    position: relative;
+}
 
+.container{
+    height: 100%;
     display: grid;
     place-content: center;
 
-    position:relative
+    position:relative   
 }
 
-main{
+.card{
+    margin-inline: auto;
+
     background:#FFF;
     padding: 4.8rem 6.4rem 6.4rem 6.4rem;
     border-radius: 6px;
+
 
     display: flex;
     flex-direction: column;    
     
     max-width: 42rem;
-
-    gap: 3.2rem;
 }
 
 form{
@@ -52,10 +61,17 @@ form{
     gap: 1.6rem;
 }
 
+form button{
+    margin-top: 3.2rem;
+}
+
+h1{
+    margin-bottom: 3.2rem;
+}
+
 .inputBox{
     display: grid;
-    grid-template-columns: calc(2, 1fr);
-
+    grid-template-rows: calc(2, 1fr);
     gap: 8px;
 }
 
@@ -81,7 +97,7 @@ form{
     border: 1px solid var(--blue-one);
 }
 
-main button{
+.card button{
     background-color: var(--blue-one);
     border-radius: 4px;
     color: #FFF;
@@ -94,4 +110,44 @@ main button{
     font-size: 1.6rem;
     font-weight: 700;
     line-height: 2rem;
+}
+
+.modalResponse{
+    position: relative;
+}
+
+.modalResponse img{
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    margin: 1rem;
+    gap: 0 !important;
+}
+
+.alert{
+    width: 100vw;
+    background-color: var(--bg-alert);
+    padding: .8rem 0%;
+    text-align: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transition: .5s;
+
+    margin-top:-4rem;
+}
+
+.open{
+    margin-top:0;
+}
+
+
+.alert p{
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height:2rem;
+    color: white;
 }

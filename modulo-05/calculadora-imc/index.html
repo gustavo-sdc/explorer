@@ -14,35 +14,40 @@
     <script src="./js/main.js" type="module" defer></script>
 </head>
 <body>
+
     <div class="app">
-        <h5 class="alert" id="alert"></h5>
-
-        <main>
-            <h1>Cálculo de IMC</h1>
-            <form action="">
-                
-                <div class="inputBox">
-                    <label for="weight">Peso (kg)</label>
-                    <input type="number" name="weight" id="weight">
-                </div>
-                <div class="inputBox">
-                    <label for="weight">Altura (cm)</label>
-                    <input type="number" name="weight" id="weight">
-                </div>
-
-            </form>
-            <button class="submit">
-                Calcular IMC 
-                <img src="./assets/arrow-up-right.svg" alt="seta">
-            </button>
-        </main>
-
-        <section class="modalResponse">
-            <button class="close" id="close">
-                <img src="./assets/close.svg" alt="close icon">
-            </button>
-            <h2></h2>
+        <section class="alert" id="alert">
+            <p id="alertContent">Digite somente números.</p>
         </section>
+    
+        <div class="container">
+            <main class="card">
+                <h1>Cálculo de IMC</h1>
+                <form action="">
+                    
+                    <div class="inputBox">
+                        <label for="weight">Peso (kg)</label>
+                        <input type="number" name="weight" id="weight">
+                    </div>
+                    <div class="inputBox">
+                        <label for="height">Altura (cm)</label>
+                        <input type="number" name="weight" step="0.01" id="height">
+                    </div>
+    
+                    <button type="submit" class="submit">
+                        Calcular IMC 
+                        <img src="./assets/arrow-up-right.svg" alt="seta">
+                    </button>
+                </form>
+            </main>
+    
+            <section class="card modalResponse hide" id="response">
+                <img src="./assets/close.svg" alt="close icon" id="closeModal">
+                <h2>
+                </h2>
+            </section>
+        </div>
+
     </div>
 </body>
 </html>
