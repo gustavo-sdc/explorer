@@ -13,6 +13,8 @@ const buttonCloseModal = document.querySelector('#closeModal')
 
 
 // Eventos
+Modal.weight.addEventListener('oninput',clearAlert)
+Modal.height.addEventListener('oninput',clearAlert)
 
 buttonCloseModal.addEventListener('click', Modal.boxToggle)
 form.onsubmit = event =>{
@@ -26,7 +28,7 @@ form.onsubmit = event =>{
         alert.errorEmptyInput()
         
     } else{
-        alert.alertBox.classList.remove('open')
+        clearAlert()
         
         const result = imcCalculator(heightValue, weightValue)
         responseContent.innerText= result
@@ -37,6 +39,10 @@ form.onsubmit = event =>{
 }
 
 // Funções
+function clearAlert(){
+    alert.alertBox.classList.remove('open')
+}
+
 function clearInput(){
     Modal.weight.value=''
     Modal.height.value=''
