@@ -6,10 +6,34 @@
     <title>FocusTimer</title>
 
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
 </head>
 <body>
     <div class="app">
-        
+        <section class="toggleTheme">
+            <button>
+                Active/Deactive
+                <i class="ph-bold ph-sun"></i>
+                <i class="ph-bold ph-moon"></i>
+            </button>
+        </section>
+
+        <section>
+            <div class="timer">
+                <span>00</span>
+                <span>:</span>
+                <span>00</span>
+            </div>
+            <div class="controls">
+                <button class="ph ph-play-circle"></button>
+                <button class="ph ph-pause-circle"></button>
+                <button class="ph ph-timer"></button>
+                <button class="ph ph-stop-circle"></button>
+                <button class="ph ph-speaker-none"></button>
+                <button class="ph ph-speaker-high"></button>
+            </div>
+        </section>
     </div>
 </body>
 </html>
