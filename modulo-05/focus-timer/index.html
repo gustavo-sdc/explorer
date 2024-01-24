@@ -1,37 +1,53 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="running music-on">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FocusTimer</title>
 
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script src="./src/main.js" type="module" defer></script>
 
 </head>
 <body>
     <div class="app">
         <section class="toggleTheme">
-            <button>
-                Active/Deactive
+            <button id="toggleMode">
+                <span class="sr-only">Ativar ou desativar lignt mode</span>
                 <i class="ph-bold ph-sun"></i>
                 <i class="ph-bold ph-moon"></i>
             </button>
         </section>
 
         <section>
-            <div class="timer">
+            <div id="timer">
                 <span>00</span>
                 <span>:</span>
                 <span>00</span>
             </div>
             <div class="controls">
-                <button class="ph ph-play-circle"></button>
-                <button class="ph ph-pause-circle"></button>
-                <button class="ph ph-timer"></button>
-                <button class="ph ph-stop-circle"></button>
-                <button class="ph ph-speaker-none"></button>
-                <button class="ph ph-speaker-high"></button>
+                <button class="ph ph-play-circle">
+                    <span class="sr-only">Ativar cronometro</span>
+                </button>
+                <button class="ph ph-pause-circle">
+                    <span class="sr-only">Pausar cronometro</span>
+                </button>
+                <button class="ph ph-timer secondary">
+                    <span class="sr-only">Configurar cronometro</span>
+                </button>
+                <button class="ph ph-stop-circle secondary">
+                    <span class="sr-only">Reiniciar cronometro</span>
+                </button>
+                <button class="ph ph-speaker-none secondary">
+                    <span class="sr-only">Ativar música</span>
+                </button>
+                <button class="ph ph-speaker-high">
+                    <span class="sr-only">Pausar música</span>
+                </button>
             </div>
         </section>
     </div>

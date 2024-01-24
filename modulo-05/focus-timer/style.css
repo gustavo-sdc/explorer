@@ -10,6 +10,9 @@
     --text-color: hsl(var(--hue), 40%, 98%);
     --primary-color: hsl(var(--hue), 100%, 63%);
     --controls-bg-color: hsl(var(--hue), 0%, 14%);
+    --button-secondary: hsl(var(--hue), 40%, 98%);
+
+    font-size: clamp(40%, 1% + 2vw, 62.5%);
 }
 
 body{
@@ -20,3 +23,90 @@ body{
     place-content: center;
 }
 
+html.light{
+    --bg-color:hsl(var(--hue), 40%, 98%);
+    --text-color: hsl(var(--hue), 5%, 7%);
+    --button-secondary: hsl(var(--hue), 40%, 98%);
+}
+
+.app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#timer{
+    font-size: 9.6rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: var(--text-color);
+}
+
+.controls{
+    margin-top:1.6rem;
+    padding:2.2rem 4rem;
+    gap: 1.6rem;
+    background-color: var(--controls-bg-color);
+    border-radius: 999rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    background-color: transparent;
+    border:none;
+    font-size: 6.4rem;
+
+    color: var(--primary-color);
+}
+
+#toggleMode{
+    position: absolute;
+    top: 3.2rem;
+    right: 3.2rem;
+    font-size: 3.2rem;
+
+    color: var(--text-color);
+}
+
+.secondary{
+    color: var(--button-secondary)
+}
+
+/* controls */
+
+
+.running .ph-pause-circle,
+.running .ph-stop-circle,
+.music-on .ph-speaker-high,
+
+html:not(.running) .ph-play-circle,
+html:not(.running) .ph-timer,
+html:not(.music-on) .ph-speaker-none
+
+{
+    display: none;    
+}
+
+html.light .ph-sun,
+html:not(.light) .ph-moon
+{
+    display: none;
+}
+
+/* Acessibility */
+
+.sr-only{
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    overflow: hidden;
+
+    margin: -1px;
+    padding: 0;
+    appearance: none;
+    border: 0;
+}
