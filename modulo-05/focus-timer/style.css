@@ -78,14 +78,13 @@ button {
 
 /* controls */
 
+.running .ph-play-circle,
+.running .ph-timer,
+.music-on .ph-speaker-none,
 
-.running .ph-pause-circle,
-.running .ph-stop-circle,
-.music-on .ph-speaker-high,
-
-html:not(.running) .ph-play-circle,
-html:not(.running) .ph-timer,
-html:not(.music-on) .ph-speaker-none
+html:not(.running) .ph-pause-circle,
+html:not(.running) .ph-stop-circle,
+html:not(.music-on) .ph-speaker-high
 
 {
     display: none;    

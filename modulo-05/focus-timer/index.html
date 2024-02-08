@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="running music-on">
+<html lang="pt-br" class="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,27 +25,27 @@
 
         <section>
             <div id="timer">
-                <span>00</span>
+                <span id="minutes">00</span>
                 <span>:</span>
-                <span>00</span>
+                <span id="seconds">00</span>
             </div>
-            <div class="controls">
-                <button class="ph ph-play-circle">
+            <div class="controls" id="controls">
+                <button class="ph ph-play-circle" data-action="toggleRunning">
                     <span class="sr-only">Ativar cronometro</span>
                 </button>
-                <button class="ph ph-pause-circle">
+                <button class="ph ph-pause-circle" data-action="toggleRunning">
                     <span class="sr-only">Pausar cronometro</span>
                 </button>
-                <button class="ph ph-timer secondary">
+                <button class="ph ph-timer secondary" data-action="set">
                     <span class="sr-only">Configurar cronometro</span>
                 </button>
-                <button class="ph ph-stop-circle secondary">
+                <button class="ph ph-stop-circle secondary" data-action="reset">
                     <span class="sr-only">Reiniciar cronometro</span>
                 </button>
-                <button class="ph ph-speaker-none secondary">
+                <button class="ph ph-speaker-none secondary" data-action="toggleMusic">
                     <span class="sr-only">Ativar música</span>
                 </button>
-                <button class="ph ph-speaker-high">
+                <button class="ph ph-speaker-high" data-action="toggleMusic">
                     <span class="sr-only">Pausar música</span>
                 </button>
             </div>
