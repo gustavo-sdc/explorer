@@ -1,0 +1,70 @@
+@import url('./theme.css');
+
+/* Components */
+
+.timer span{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12.6rem;
+    font-weight: 500;
+}
+
+nav button{
+    background-color: transparent;
+    border: none;
+
+    font-size: 4.8rem;
+    color: var(--grey-700);
+}
+
+.controlls button{
+    width: 13.8rem;
+    height: 15.2rem;
+
+    font-size: 4.8rem;
+
+    border-radius:2.4rem;
+    background-color: var(--grey-300);
+    border: none;
+    padding: 2.4rem;
+}
+
+.controlls button:focus{
+    background-color: var(--active);
+    color: white;
+}
+
+
+/* Layout */
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 82rem;
+    height: 33rem;
+
+    margin:auto;
+}
+
+.timer{
+    display: grid;    
+    place-content: center;
+    gap: 2rem;
+}
+
+.timer nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.controlls{
+    width: 50%;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 3.2rem;
+}
