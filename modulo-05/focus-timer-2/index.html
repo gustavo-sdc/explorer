@@ -6,7 +6,7 @@
 
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="./assets/css/index.css">
-    <script src="./app/index.js" defer></script>
+    <script src="./app/index.js" defer type="module"></script>
 
     <title>Focus Timer 2.0</title>
 </head>
@@ -14,23 +14,23 @@
     <main>
         <div class="timer">
             <div>
-                <span>00</span>
-                <span>:</span>
-                <span>00</span>
+                <span id="minutes">00</span>
+                <span>:</span>  
+                <span id="seconds">05</span>
             </div>
             <nav>
-                <button class="ph ph-play-circle"></button>
-                <button class="ph ph-stop-circle"></button>
-                <button class="ph ph-plus-circle"></button>
-                <button class="ph ph-minus-circle"></button>
+                <button class="ph ph-play-circle" data-action="playTimer"></button>
+                <button class="ph ph-stop-circle" data-action="stopTimer"></button>
+                <button class="ph ph-plus-circle" data-action="changeTimer"></button>
+                <button class="ph ph-minus-circle" data-action="changeTimer"></button>
             </nav>
         </div>
 
         <div class="controlls">
-            <button class="ph ph-tree"></button>
-            <button class="ph ph-cloud-snow"></button>
-            <button class="ph ph-storefront"></button>
-            <button class="ph ph-flame"></button>
+            <button class="ph ph-tree" data-action="musicTree"></button>
+            <button class="ph ph-cloud-snow" data-action="musicRain"></button>
+            <button class="ph ph-storefront" data-action="musicStore"></button>
+            <button class="ph ph-flame" data-action="musicFlame"></button>
         </div>
     </main>
 </body>
