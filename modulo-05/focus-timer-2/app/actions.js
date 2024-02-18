@@ -1,19 +1,21 @@
-import * as el from './elements.js'
 import { timerControlls, controlls } from './elements.js'
 import state from './state.js'
 import * as functions from './functions.js'
+import * as music from './music.js'
+
 
 export function controllTimer(){
     timerControlls.addEventListener('click', event =>{
         const action = event.target.dataset.action
+
 
         if(typeof action === 'undefined'){
             return
         }
 
         if(action === 'playTimer'){
-            functions.toggleRunning()
             state.isRunning = true
+            functions.toggleRunning()
         }
         
         if(action === 'stopTimer'){
@@ -22,11 +24,11 @@ export function controllTimer(){
         }
 
         if(action === 'addTimer'){
-            changeTimer(action)
+            functions.changeTimer(action)
         }
 
         if(action === 'lessTimer'){
-            changeTimer(action)
+            functions.changeTimer(action)
         }
 
     })
@@ -37,75 +39,25 @@ export function controllTimer(){
 export function controllSound(){
     controlls.addEventListener('click', event =>{
         const action = event.target.dataset.action
-        console.log(action)
-
 
         if(typeof action === 'undefined'){
-            console.log(action)
             return
         }
 
         if(action === 'musicTree'){
-            console.log('MusicTree On')
-            state.musicOn = !state.musicOn
-            
-            if(state.musicOn){
-                music.treeAudio.play()
-                return
-            }
-
-            music.treeAudio.pause()
+            functions.updateMusic('musicTree')
         }
 
         if(action === 'musicRain'){
-            music.rainAudio.play()
+            functions.updateMusic('musicRain')
         }
 
         if(action === 'musicShop'){
-            music.storeAudio.play()
+            functions.updateMusic('musicShop')
         }
 
         if(action === 'musicFlame'){
-            music.flameAudio.play()
+            functions.updateMusic('musicFlame')
         }
     })
-}
-
-export function changeTimer(action){
-    let minutes = Number(state.minutes)
-    let seconds = Number(state.seconds)
-
-    if(action === 'addTimer'){
-        minutes += 5
-        state.minutes = minutes
-
-        if(minutes > 60){
-            minutes = 60
-            seconds = 0
-
-            state.minutes = minutes
-            state.seconds = seconds
-
-            functions.updateTimer(minutes, seconds)
-
-            return
-        }
-
-        if(minutes === 60){
-            seconds = 0
-            functions.updateTimer(minutes, seconds)
-        }
-    }
-    
-    if(action === 'lessTimer'){
-        minutes -= 5
-
-        if(minutes <0){
-            return
-        }
-
-        state.minutes = minutes
-    }
-    
-    functions.updateTimer(minutes, seconds)
 }

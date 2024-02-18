@@ -5,14 +5,8 @@
     -> Criar função do timer;
 
 */
+import * as actions from './actions.js'
 
-import state from "./state.js";
+actions.controllSound()
+actions.controllTimer()
 
-
-export function start(minutes, seconds){
-    state.minutes = minutes
-    state.seconds = seconds
-
-    timer.updateDisplay()
-
-}
