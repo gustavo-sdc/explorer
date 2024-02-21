@@ -1,3 +1,4 @@
+
 export class Router{
     routes = {}
 
@@ -15,10 +16,7 @@ export class Router{
     }
     
     handle(){
-        const { pathname } = window.location
-    
-        console.log(pathname)
-        
+        const { pathname } = window.location        
         const route = this.routes[pathname] || this.routes[404]
     
         fetch(route)

@@ -1,9 +1,11 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root{
+    font-family: 'Roboto', sans-serif;
     font-size: 62.5%; /*1rem = 10px*/
 
     --white: #FFF;
@@ -12,24 +14,120 @@
     --tt-active: #02799D;
 }
 
-body{
+
+main{
     font-size: 1.6rem;
     width: 100vw;
     height: 100vh;
 
-    display: grid;
-    align-items: start;
-    justify-content: center;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
 }
 
 header{
+    position: fixed;
+    top: 0;
+    left: 0;
+
     width: 100vw;
 
     display: flex;
     align-items: center;
     justify-content: left;
-    gap: 32;
+    gap: 3.2rem;
 
     padding: 4rem 0 4rem 7.2rem;
 }
 
+nav{
+    display: flex;
+    gap: 3.2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+nav a{
+    text-decoration: none;
+    color:var(--tt-base);
+    font-weight: 400;
+    font-size: 2.2rem;
+    transition: .8s;
+}
+
+nav a:hover,
+nav a:focus{
+    color: var(--white);
+    font-weight: 600;
+}
+
+button{
+    width: 19.5rem;
+    height: 4.8rem;
+
+    border: .2rem solid var(--white);
+    border-radius: .5rem;
+    background-color: transparent;
+
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.4rem;
+
+    margin: auto;   
+    
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+button:focus,
+button:hover{
+    background: var(--white);
+    color: var(--tt-active);
+}
+
+.home{
+    background: url('../images/mountains-universe-1.png');
+    display: grid;
+    place-content: center;
+    gap: 2.4rem;
+}
+
+.universo{
+    background: url('../images/mountains-universe02.png');
+}
+
+.exploracao{
+    background: url('../images/mountains-universe-3.png')
+}
+
+.home h1,
+.universo h2,
+.exploracao h2{
+    font-size: 4.8rem;
+    font-weight: 600;
+    color: var(--tt-title);
+}
+
+.universo section,
+.exploracao section{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    gap: 1.6rem;
+
+    color: var(--tt-base);
+
+    width: 100vw;  
+    height: 100%; 
+
+    padding: 18.5rem 0 0 10.2rem;
+}
+
+.universo p,
+.exploracao p{
+    font-size: 1.8rem;
+    max-width: 64rem;
+}
