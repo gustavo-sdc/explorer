@@ -1,0 +1,174 @@
+/* font-family: 'Poppins', sans-serif */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 65.2%; /*1rem = 10px*/
+
+    --hue: 194;
+    
+    --tt-title: hsl(var(--hue), 0%, 100%);
+    --tt-base: hsl(var(--hue), 0%, 20%);
+    --tt-remove: hsl(360, 100%, 60%);
+
+    --primary-color: hsl(var(--hue), 100%, 20%);
+    
+
+}
+
+body{
+    font-size: 1.6rem;
+}
+
+body *{
+    font-family: 'Poppins', sans-serif;
+    color: var(--tt-base);
+}
+
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: none;
+    clip:rect(0,0,0,0);
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+}
+
+.submit{
+    background-color: var(--primary-color);
+}
+
+.app{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 6rem;
+}
+
+button{
+    cursor: pointer;
+}
+
+header{
+    width: 50rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1{
+    font-size: 2.4rem;
+    text-transform: uppercase;
+}
+
+form{
+    display: flex;
+    gap: 0;
+}
+
+form input{
+    border: 1px solid lightgrey;
+    border-radius: .5rem 0 0 .5rem;
+
+    padding: 0 .8rem;
+    width: 20rem;
+    height: 3.2rem;
+}
+
+form button{
+    border: none;
+    background-color: var(--primary-color);
+    border-radius: 0 .5rem .5rem 0;
+
+    width: 2.5rem;
+    height: 3.2rem;
+
+    font-size: 1.6rem;
+    color: var(--tt-title);
+}
+
+main,
+table{
+    width: 50rem;
+}
+
+table{
+    margin: 10% auto;
+    border-collapse: collapse;
+}
+
+table th{
+    color: var(--tt-title);
+    font-weight: normal;
+    text-align: left;
+
+    padding: 1rem 0rem;
+    background-color: var(--primary-color);
+
+    width: max-content;
+}
+
+table th:first-child{
+    border-radius: .5rem 0 0 0;
+    padding: 1rem;
+}
+
+table th:last-child{
+    border-radius: 0 .5rem 0 0;
+    padding: 1rem;
+}
+
+
+.user{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    gap: 1rem;
+}
+
+.remove{
+    border: none;
+    background-color: transparent;
+
+    color: var(--tt-remove);
+    font-size: 1.6rem;
+}
+
+
+tbody tr:nth-child(even){
+    background-color: lightgrey;
+}
+
+tbody tr:nth-child(odd){
+    background-color: grey;
+}
+
+table img{
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+table a{
+    text-decoration: none;
+}
+
+table a p{
+    font-weight: 600;
+}
+
