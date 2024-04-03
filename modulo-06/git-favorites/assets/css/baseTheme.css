@@ -26,6 +26,9 @@
     --tt-default: hsl(var(--hue), 0%, 100%);
     --tt-secondary:hsl(189, 4%, 32%);
     --tt-hover: var(--bg-primary);
+
+    --red: hsl(355, 91%, 66%);
+    --grey: hsl(240, 6%, 51%);
 }
 
 body{
@@ -47,3 +50,60 @@ body{
     place-content: center;
 }   
 
+header{
+    width: 110rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;=
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: .8rem;
+}
+
+header input{
+    background-color: var(--bg-secondary);
+    border-radius: .5rem;
+    border: none;
+
+    padding: 1.6rem;
+    width: 40rem;
+    transition: .2s;
+}
+
+header input:focus,
+header input:hover{
+    outline: none;
+    filter: brightness(110%);
+}
+
+header input::placeholder{
+    color: var(--grey);
+}
+
+header button{
+    border: none;
+    background-color: var(--bg-primary);
+    border-radius: .5rem;
+
+    color: var(--bg-light);
+    padding: 1.6rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
+
+    cursor: pointer;
+    transition: .2s;
+}
+
+header button:hover,
+header button:focus{
+    background-color: var(--bg-light);
+    color: var(--tt-hover);
+}
