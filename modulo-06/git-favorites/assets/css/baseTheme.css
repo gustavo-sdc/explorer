@@ -21,6 +21,7 @@
 
     --bg-primary:hsl(195, 91%, 25%);
     --bg-secondary:hsl(191, 65%, 7%);
+    --bg-third:  	hsl(194, 72%, 13%);
     --bg-hover:var(var(--bg-light));
 
     --tt-default: hsl(var(--hue), 0%, 100%);
@@ -40,14 +41,15 @@ body{
 
 .app{
     width: 100vw;
-    height: 100vh;
 
     background-color: var(--bg-dark);
 
-    padding: 0vw 10vw;
+    padding: 10% 10vw;
 
-    display: grid;
-    place-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
 }   
 
 header{
@@ -55,7 +57,7 @@ header{
 
     display: flex;
     align-items: center;
-    justify-content: space-between;=
+    justify-content: space-between;
 }
 
 .search{
@@ -106,4 +108,33 @@ header button:hover,
 header button:focus{
     background-color: var(--bg-light);
     color: var(--tt-hover);
+}
+
+table{
+    margin-top: 8.7rem;
+    border-collapse: collapse;
+
+    width: 100%;
+}
+
+th{
+    background-color: var(--bg-third);
+    padding: 1.6rem 4rem;
+}
+
+th:first-child{
+    border-radius: .5rem 0rem 0rem 0rem;
+}
+
+th:last-child{
+    border-radius: 0rem .5rem 0rem 0rem;
+}
+
+tbody{
+    background-color: var(--bg-secondary);
+}
+
+tbody h2{
+    color: var(--grey);
+    min-height: 30rem;
 }
