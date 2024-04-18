@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Mulish', sans-serif;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+    --pink: #B52184;
+    --pourple: #312D64;
+
+    --gradient-one: #343193;
+    --gradient-two: #302C63;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding-bottom: 10%;
+}
+
+main img{
+
+}
+
+h1,
+h2{
+    color: var(--pink);
+    font-weight: 800;
+    font-size: 3.2rem;
+}
+
+p{
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--pourple);
+}
+
+main a{
+    border: .4rem solid var(--pink);
+    background: transparent;
+    border-radius: 5rem;
+    width: max-content;
+
+    padding: 3rem 1.4rem;
+    margin: 3.5rem auto 0 auto;
+    display: flex;
+}
+
+main a svg{
+    height: 6rem;
+    color: var(--pink);
+}
+
+.planets{
+    background-color: var(--pourple);
+    padding: 10%;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.card{
+    background-color: white;
+    border-radius: 2rem;
+    padding: 10% 5%;
+
+    display: grid;
+    gap: 2rem;
+
+
+}
+
+.card img{
+    margin-bottom: 1rem;
+}
+
+.contact{
+    padding: 10%;
+}
+
+.content{
+    position: relative;
+}
+
+.contact img{
+    display: none;
+}
+
+input,
+textarea{
+    outline: none;
+
+    min-height: 4.6rem;
+    border-radius: 1.6rem;
+    border: .15rem solid var(--pourple);
+    padding: 1.2rem 1.4rem;
+    outline: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+}
+
+input::placeholder,
+textarea::placeholder{
+    color: var(--pourple);
+}
+
+.content label{
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.content label img{
+    color: var(--pink);
+}
+
+.submit{
+    background: linear-gradient(90deg, var(--gradient-one), var(--gradient-two));
+    padding: 1rem 1.6rem;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 1.6rem;
+    margin-top: 5%;
+}
+
+footer{
+    background: linear-gradient(90deg, var(--gradient-one), var(--gradient-two));
+    display: grid;
+    place-content: center;
+    padding: 1.6rem;
+}
+
+footer p{
+    color: white;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+@media (min-width:880px){
+    h1{
+        font-size: 6rem;
+    }
+
+    a{
+        margin: 10% 0% !important;
+    }
+
+    main{
+        align-items: center;
+        justify-content: left;
+        flex-direction: row;
+        position: relative;
+
+        padding: 0%;
+        padding-left: 10%;
+    }
+
+
+    main img{
+        position: absolute;
+        top: 0;
+        right: 1rem;
+
+        height: 70vh;
+    }
+
+    .planets{
+        flex-wrap: nowrap;
+    }
+
+    .card{
+        padding: 2.5%;
+    }
+
+    .contact{
+        position: relative;
+    }
+
+    .contact img{
+        display: block;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+
+        height: 100%;
+    }
+
+    form{
+        width: 40vw;
+    }
+}
