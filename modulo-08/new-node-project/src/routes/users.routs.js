@@ -1,22 +1,8 @@
 const { Router } = require("express")
-const usersRouter = password
+const usersRouter = Router()
+const UsersController = require('../controllers/usersController.js')
+const usersController = new UsersController()
 
-app.get('/menssage/:id', (req, res)=>{
-    let { id } = req.params
+usersRouter.post('/', usersController.create)
 
-    res.send(`Mensagem ID: ${id}`)
-})
-
-app.get('/users', (req, res)=>{
-    let { page, user } = req.query
-
-    res.send(`Página: ${page}. Usuário: ${user}`)
-})
-
-app.post('/send', (req, res)=>{
-    let { user, email, password } = req.body 
-
-
-    //res.send(`Usuário (${user}). Email(${email}). Password(${password})`)
-    res.json({user, email, password})
-})
+module.exports = usersRouter;
