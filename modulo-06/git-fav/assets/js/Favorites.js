@@ -26,6 +26,7 @@ class Favorites {
         })
 
         this.infos = filterredInfos
+        this.update()
     }
 }
 
@@ -34,6 +35,7 @@ export class FavoritesView extends Favorites {
         super(root)
 
         this.tbody = this.root.querySelector('table tbody')
+        console.log(this.tbody)
         this.update()
     }
 

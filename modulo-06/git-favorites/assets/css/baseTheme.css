@@ -21,7 +21,12 @@
 
     --bg-primary:hsl(195, 91%, 25%);
     --bg-secondary:hsl(191, 65%, 7%);
-    --bg-third:  	hsl(194, 72%, 13%);
+    
+    --bg-tt-default: hsl(240, 9%, 89%);
+    --bg-table-primary:hsla(194, 64%, 6% , 0.5);
+
+    --bg-third:hsl(194, 72%, 13%);
+
     --bg-hover:var(var(--bg-light));
 
     --tt-default: hsl(var(--hue), 0%, 100%);
@@ -41,6 +46,7 @@ body{
 
 .app{
     width: 100vw;
+    min-height: 100vh;
 
     background-color: var(--bg-dark);
 
@@ -53,10 +59,12 @@ body{
 }   
 
 header{
-    width: 110rem;
+    width: 100%;
+    max-width: 110rem;
 
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    align-items: flex-end;
     justify-content: space-between;
 }
 
@@ -75,6 +83,7 @@ header input{
     padding: 1.6rem;
     width: 40rem;
     transition: .2s;
+    color: var(--grey);
 }
 
 header input:focus,
@@ -115,15 +124,18 @@ table{
     border-collapse: collapse;
 
     width: 100%;
+    border-radius:.5rem;
 }
 
 th{
     background-color: var(--bg-third);
-    padding: 1.6rem 4rem;
+    padding: 1.6rem 0rem 1.6rem 0rem;
+    text-align: left;
 }
 
 th:first-child{
     border-radius: .5rem 0rem 0rem 0rem;
+    padding-left:4rem ;
 }
 
 th:last-child{
@@ -132,9 +144,95 @@ th:last-child{
 
 tbody{
     background-color: var(--bg-secondary);
+    width: 100% !important;
 }
 
 tbody h2{
     color: var(--grey);
     min-height: 30rem;
+}
+
+tbody tr:nth-child(even){
+    background-color: var(--bg-table-primary);
+}
+
+tbody tr:nth-child(odd){
+    background-color: var(--bg-secondary);
+}
+
+td div{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 4rem;
+    padding: 2.4rem 0%;
+}
+
+.not-favorites{
+    width: 100%;
+}
+
+.not-favorites div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+
+    margin: 10% auto;
+}
+
+.not-favorites div p{
+    color: var(--grey);
+    font-size: 4rem;
+    font-weight: 800;
+    font-family: 'Roboto-Mono', sans-serif;
+}
+
+.infos,
+.remove{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: left;
+
+}
+
+.user{
+    flex-direction: column;
+}
+
+.user a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--bg-tt-default);
+}
+
+.user a p{
+    font-weight: 800;
+}
+
+.user a span{
+    font-weight: 400;
+}
+
+.user img{
+    width: 5.6rem;
+    border-radius:50%;
+}
+
+.remove{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+
+    color: var(--red);
+    font-weight: 800;
+    font-size: 2rem;
 }
