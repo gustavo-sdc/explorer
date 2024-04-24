@@ -7,5 +7,4 @@ app.use(express.json())
 app.use(routes)
 
 const port = 3333
-
 app.listen(port, ()=> console.log(`This server is running on Port ${port}`))

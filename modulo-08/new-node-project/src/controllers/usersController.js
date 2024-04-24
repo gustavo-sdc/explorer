@@ -10,11 +10,7 @@ class usersController {
     create(req,res){
         const { user, email, password } = req.body
 
-        res.send({ user, email, password})
-    }
-
-    show(req,res){
-        
+        res.status(201).json({ user, email, password})
     }
 }
 
