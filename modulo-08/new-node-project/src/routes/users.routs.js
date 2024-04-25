@@ -20,5 +20,6 @@ usersRouter.use(myMiddleware)
 */
 
 usersRouter.post('/', usersController.create)
+usersRouter.put('/:id', usersController.update)
 
 module.exports = usersRouter;
