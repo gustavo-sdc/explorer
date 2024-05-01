@@ -16,6 +16,7 @@ class usersController {
 
         const passwordHashed = await hash(password, 8)
         const database = await sqliteConnection()
+        
         const checkUserExists = await database.get("SELECT * FROM users WHERE email = (?)", [email])
 
         console.log(email)
