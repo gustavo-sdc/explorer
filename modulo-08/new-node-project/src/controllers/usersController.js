@@ -3,14 +3,6 @@ const AppError = require("../utils/AppError")
 const sqliteConnection = require("../database/sqlite")
 
 class usersController {
-    /*
-    index -GET para listar vários registros
-    show - GET para exibir um registro específico
-    create - POST para criar um registro
-    update - PUT para atualizar um registro
-    delete - DELETE para remover um registro
-    */
-
     async create(req,res){
         const { user, email, password } = req.body
 
@@ -33,10 +25,9 @@ class usersController {
 
     async update(req, res){
         const { user, email, password, old_password } = req.body
-        const { id } = req.params
-
+        const user_id = req.user.id
         const database = await sqliteConnection()
-        const userDB = await database.get(`SELECT * FROM users WHERE id = (?)`,[id])
+        const userDB = await database.get(`SELECT * FROM users WHERE id = (?)`,[user_id])
         const updatedEmail = await database.get(`SELECT * FROM users WHERE email = (?)`,[email])
 
         if (!userDB){
@@ -70,7 +61,7 @@ class usersController {
             password = ?,
             updated_add = DATETIME('now')
             WHERE id = ?
-        `,[userDB.name, userDB.email, userDB.password, id])  
+        `,[userDB.name, userDB.email, userDB.password, user_id])  
 
         return res.status(200).json()
 
