@@ -17,12 +17,12 @@ export function SignUp(){
     const navigate = useNavigate()
 
     function handleSignUp(){
-        
+
         if(!name || !email || !password ){
             return alert("Preencha todos os campos")
         }
 
-        api.post("/users", { name, email, password })
+        api.post("/users", { user: name, email, password })
         .then(() => {
             alert("Usuário cadastrado com sucesso!")
             navigate("/")

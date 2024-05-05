@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { ThemeProvider } from 'styled-components'
 import GLobalStyles from './styles/global'
 
-import { AuthProvider } from './hooks/auth.js'
+import { AuthProvider } from './hooks/auth'
 import { Routes } from './routes'
 
 import theme from './styles/theme'
